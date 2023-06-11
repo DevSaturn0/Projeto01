@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação do Projeto</title>
+    <style>
+@font-face {
+    font-family: MADEINFINITY PERSONALUSE-Light;
+    src: url(fonts/MADEINFINITY\ PERSONALUSE-Light.otf);
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('imagens/imagemso.png');
+  background-size: cover;
+  background-position: center;
+  font-family: MADEINFINITY PERSONALUSE-Light', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.glass {
+  height: 100%;
+  width: 100%;
+  background-color:rgba(255, 246, 240, 0.705);
+  background-size: cover;
+  background-position: center;
+  clip-path: inset(5em);
+  filter: blur(100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drop-shadow {
+  height: 100%;
+  width: 100%;
+  filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.30));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drop-shadow:before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 5em;
+  height: calc(100% - 20em);
+  width: calc(100% - 20em);
+  border-top: 2px solid rgba(225, 225, 225, 0.2);
+  border-left: 1px solid rgba(225, 225, 225, 0.1);
+  border-right: 1px solid rgba(225, 225, 225, 0.3);
+  z-index: 2;
+}
+
+.drop-shadow > span {
+  position: absolute;
+  z-index: 5;
+  color: rgb(0, 16, 158);
+  font-size: 1.4em;
+  letter-spacing: 0.061em;
+  height: calc(100% - 10em);
+  width: calc(100% - 10em);
+  text-align: justify;
+  
+
+
+  
+}
+
+@media (max-width: 980px) {
+  .glass {
+    clip-path: inset(1em);
+  }
+  
+  .drop-shadow:before {
+    top: 5em;
+    width: calc(100% - 30em);
+  }
+  
+  .drop-shadow > span {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 640px) {
+  .drop-shadow > span {
+    font-size: 1em;
+  }
+}
+     
+
+    </style>
+</head>
+<body>
+    <div class="drop-shadow">
+        <div class="glass"></div>
+          <span>Somos estudantes do curso de Medicina Veterinária da Faculdade Serra Dourada de Altamira, e nosso objetivo é fornecer informações sobre a cardiopatia canina para auxiliar os tutores que enfrentam esse problema com seus cães. Aqui você encontrará informações sobre os diferentes tipos de cardiopatia canina, seus sintomas e cuidados necessários. Além disso, disponibilizamos o contato de um médico veterinário especializado em cardiologia para consultas e orientações. Estamos comprometidos em ajudar os tutores a entenderem e lidarem com a cardiopatia canina, garantindo o bem-estar de seus cães.</span>
+          </div>
+</body>
+</html>

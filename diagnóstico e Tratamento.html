@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagnóstico</title>
+  <link rel="shortcut icon" href="favicon/logomedvet.png" type="image/x-icon">
+  <style>
+    /* Estilização CSS */
+    body {
+      position: relative;
+      margin: 0;
+      padding: 5%;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      background-color: rgba(123, 130, 249, 0.629);
+
+    }
+
+    #quiz-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    ul li input[type="radio"] {
+      display: none;
+    }
+
+    ul li label {
+      display: block;
+      padding: 10px;
+      background-color: #f5f5f5;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    ul li label:hover {
+      background-color: #ebebeb;
+    }
+
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.5s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #result {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .message-box {
+      position: relative;
+      padding: 25%;
+      background-color: #5f1dc2;
+    }
+      
+
+  </style>
+</head>
+<body>
+  <h1>Quiz de Diagnóstico</h1>
+  
+  <div id="quiz-container">
+    <h3>Pergunta 1:</h3>
+    <p>Seu animalzinho está apresentando dispneia intensa, ou seja, dificuldade intensa para respirar?</p>
+    <ul>
+      <li>
+        <input type="radio" name="q1" value="yes">
+        <label>Sim</label>
+      </li>
+      <li>
+        <input type="radio" name="q1" value="no">
+        <label>Não</label>
+      </li>
+    </ul>
+    <h3>Pergunta 2:</h3>
+    <p>Seu animalzinho está respirando com a boca aberta para melhorar a oxigenação?</p>
+    <ul>
+      <li>
+        <input type="radio" name="q2" value="yes">
+        <label>Sim</label>
+      </li>
+      <li>
+        <input type="radio" name="q2" value="no">
+        <label>Não</label>
+      </li>
+    </ul>
+    <h3>Pergunta 3:</h3>
+    <p>Seu animalzinho está apresentando tosse crônica?</p>
+    <ul>
+      <li>
+        <input type="radio" name="q3" value="yes">
+        <label>Sim</label>
+      </li>
+      <li>
+        <input type="radio" name="q3" value="no">
+        <label>Não</label>
+      </li>
+    </ul>
+    <h3>Pergunta 4:</h3>
+    <p>Seu animalzinho está com taquipneia, ou seja, respiração acelerada?</p>
+    <ul>
+      <li>
+        <input type="radio" name="q4" value="yes">
+        <label>Sim</label>
+      </li>
+      <li>
+        <input type="radio" name="q4" value="no">
+        <label>Não</label>
+      </li>
+    </ul>
+    <h3>Pergunta 5:</h3>
+    <p>Seu animalzinho apresenta perda de peso?</p>
+    <ul>
+      <li>
+        <input type="radio" name="q5" value="yes">
+        <label>Sim</label>
+      </li>
+      <li>
+        <input type="radio" name="q6" value="no">
+        <label>Não</label>
+      </li>
+    </ul>
+    <h3>Pergunta 6:</h3>
+    <p>Seu animalzinho está demonstrando fraqueza?</p>
+    <ul>
+      <li>
+        <input type="radio" name="q7" value="yes">
+        <label>Sim</label>
+      </li>
+      <li>
+        <input type="radio" name="q7" value="no">
+        <label>Não</label>
+      </li>
+    </ul>
+
+    <h3>Pergunta 7:</h3>
+    <p>Seu animalzinho apresenta cãibras ou dores durante atividades fisicas?</p>
+    <ul>
+      <li>
+        <input type="radio" name="q8" value="yes">
+        <label>Sim</label>
+      </li>
+      <li>
+        <input type="radio" name="q8" value="no">
+        <label>Não</label>
+      </li>
+    </ul>
+
+
+    <h3>Pergunta 8:</h3>
+    <p>Seu animalzinho está apresentando cianose, ou seja, uma coloração azulada nas mucosas?</p>
+    <ul>
+      <li>
+        <input type="radio" name="q9" value="yes">
+        <label>Sim</label>
+      </li>
+      <li>
+        <input type="radio" name="q9" value="no">
+        <label>Não</label>
+      </li>
+    </ul>
+
+    <h3>Pergunta 9:</h3>
+    <p>Seu animalzinho está com tosse baixa?</p>
+    <ul>
+      <li>
+        <input type="radio" name="q10" value="yes">
+        <label>Sim</label>
+      </li>
+      <li>
+        <input type="radio" name="q10" value="no">
+        <label>Não</label>
+      </li>
+    </ul>
+
+    <h3>Pergunta 10:</h3>
+    <p>Seu animalzinho está apresentando dificuldade para se exercitar?</p>
+    <ul>
+      <li>
+        <input type="radio" name="q1" value="yes">
+        <label>Sim</label>
+      </li>
+      <li>
+        <input type="radio" name="q1" value="no">
+        <label>Não</label>
+      </li>
+    </ul>
+    
+    <br>
+    <button id="check-btn">Verificar Respostas</button>
+    <p id="result"></p>
+  </div>
+
+
+
+  <script>
+// Obter referências dos elementos HTML
+const checkButton = document.getElementById("check-btn");
+const resultText = document.getElementById("result");
+
+// Adicionar evento de clique ao botão "Verificar Respostas"
+checkButton.addEventListener("click", function() {
+  // Obter respostas selecionadas pelo usuário
+  const q1Answer = document.querySelector('input[name="q1"]:checked');
+  const q2Answer = document.querySelector('input[name="q2"]:checked');
+  const q3Answer = document.querySelector('input[name="q3"]:checked');
+  const q4Answer = document.querySelector('input[name="q4"]:checked');
+  const q5Answer = document.querySelector('input[name="q5"]:checked');
+  const q6Answer = document.querySelector('input[name="q6"]:checked');
+  const q7Answer = document.querySelector('input[name="q7"]:checked');
+  const q8Answer = document.querySelector('input[name="q8"]:checked');
+  const q9Answer = document.querySelector('input[name="q9"]:checked');
+  const q10Answer = document.querySelector('input[name="q10"]:checked');
+
+  // Verificar se todas as perguntas foram respondidas
+  if (
+    q1Answer &&
+    q2Answer &&
+    q3Answer &&
+    q4Answer &&
+    q5Answer &&
+    q6Answer &&
+    q7Answer &&
+    q8Answer &&
+    q9Answer &&
+    q10Answer
+  ) {
+    // Verificar as respostas selecionadas e exibir o resultado
+    if (
+      q1Answer.value === "yes" &&
+      (q2Answer.value === "yes" ||
+        q3Answer.value === "yes" ||
+        q4Answer.value === "yes" ||
+        q5Answer.value === "yes" ||
+        q6Answer.value === "yes" ||
+        q7Answer.value === "yes" ||
+        q8Answer.value === "yes" ||
+        q9Answer.value === "yes" ||
+        q10Answer.value === "yes")
+    ) {
+      resultText.textContent = "Estranho";
+    } else if (
+      q1Answer.value === "no" &&
+      q2Answer.value === "no" &&
+      q3Answer.value === "no" &&
+      q4Answer.value === "no" &&
+      q5Answer.value === "no" &&
+      q6Answer.value === "no" &&
+      q7Answer.value === "no" &&
+      q8Answer.value === "no" &&
+      q9Answer.value === "no" &&
+      q10Answer.value === "no"
+    ) {
+      resultText.textContent = "Parece bom";
+    } else if (
+      (q1Answer.value === "5" ||
+        q1Answer.value === "10" ||
+        q1Answer.value === "1" ||
+        q1Answer.value === "1" ||
+        q1Answer.value === "6" ||
+        q1Answer.value === "7") &&
+      (q2Answer.value === "3" ||
+        q2Answer.value === "6" ||
+        q2Answer.value === "6" ||
+        q2Answer.value === "4" ||
+        q2Answer.value === "5")
+    ) {
+      resultText.textContent = "Endocardite";
+    } else if (
+      (q1Answer.value === "1" ||
+        q1Answer.value === "9" ||
+        q1Answer.value === "2" ||
+        q1Answer.value === "8") &&
+      (q2Answer.value === "1" ||
+        q2Answer.value === "2" ||
+        q2Answer.value === "3" ||
+        q2Answer.value === "4" ||
+        q2Answer.value === "5")
+    ) {
+      resultText.textContent = "Gastrite";
+    } else {
+      resultText.textContent = "Outra condição";
+    }
+  } else {
+    resultText.textContent = "Por favor, responda todas as perguntas.";
+  }
+});
+
+
+
+  </script>
+</body>
+</html>
